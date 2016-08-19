@@ -6,21 +6,13 @@ var NotesApplication = require('./lib/notesapplication.js');
 var Note = require('./lib/notes.js');
 
     describe("Note object was created appropraitely", function() {
-        it("assigns author based on entered parameter", function() {
+        it("assigns author, content, note_id based on entered parameter", function() {
             var note = new Note ("Moyosore", "My notes", "5")
             var app = new NotesApplication()
             assert(note.author == "Moyosore")
-        });
-        it("assigns content based on entered parameter", function() {
-            var note = new Note ("Moyosore", "My notes", "5")
-            var app = new NotesApplication()
             assert(note.content == "My notes")
-        });
-        it("assigns note id based on entered parameter", function() {
-            var note = new Note ("Moyosore", "My notes", "5")
-            var app = new NotesApplication()
             assert(note.note_id == "5")
-        })
+        });
     })
 
     describe ("Note apllication has a note_list array", function(){
